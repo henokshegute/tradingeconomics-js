@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indicator Comparison</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Compare Two Indicators for a Country</h1>
+    </div>
+
+    <div class="dropdown-container">
+      <select id="country">
+        <option value="mexico">Mexico</option>
+        <option value="sweden">Sweden</option>
+        <option value="New Zealand">New Zealand</option>
+        <option value="thailand">Thailand</option>
+      </select>
+
+      <select id="indicator1">
+        <option value="gdp">GDP</option>
+        <option value="population">Population</option>
+        <option value="inflation rate">Inflation Rate</option>
+        <option value="unemployment rate">Unemployment Rate</option>
+      </select>
+
+      <select id="indicator2">
+        <option value="gdp">GDP</option>
+        <option value="population">Population</option>
+        <option value="inflation rate">Inflation Rate</option>
+        <option value="unemployment rate">Unemployment Rate</option>
+      </select>
+
+      <button id="compareButton">Compare</button>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/indicatorComparison.js"></script>
+  </body>
+</html>

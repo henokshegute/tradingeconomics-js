@@ -1,0 +1,90 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  margin: 0;
+  color: #333;
+}
+
+/* Container for center alignment and spacing */
+.container {
+  text-align: center;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+/* Header styling */
+.container h1 {
+  margin-bottom: 20px;
+  color: #1a73e8;
+  font-size: 2.5rem;
+}
+
+/* Description text styling */
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+/* Flexbox container for the cards */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card styling */
+.card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Card header styling */
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #1a73e8;
+}
+
+/* Card paragraph styling */
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.link-button {
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1a73e8;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+  width: 60%;
+}
+
+.link-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.link-button:active {
+  background-color: #004494;
+}

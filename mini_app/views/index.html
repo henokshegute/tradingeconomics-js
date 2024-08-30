@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/index.css" />
+    <!-- Link to the external CSS file -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Data Visualization App</h1>
+      <p class="description">
+        Choose one of the following options to visualize and compare economic
+        and demographic data. Click the buttons below to navigate to the
+        respective data comparison tools.
+      </p>
+
+      <div class="card-container">
+        <div class="card">
+          <h2>Compare GDP Data</h2>
+          <p>
+            Use this tool to compare GDP data between different countries.
+            Select the countries and see how their GDPs stack up against each
+            other over time. Perfect for analyzing economic performance.
+          </p>
+          <a href="/api/compare-gdp-data" class="link-button"
+            >Go to GDP Comparison</a
+          >
+        </div>
+
+        <div class="card">
+          <h2>Compare Indicators</h2>
+          <p>
+            Compare two economic or demographic indicators within a selected
+            country. Visualize the relationship between different indicators
+            with a scatter plot to see how they correlate or diverge.
+          </p>
+          <a href="/api/compare-indicators" class="link-button"
+            >Go to Indicator Comparison</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

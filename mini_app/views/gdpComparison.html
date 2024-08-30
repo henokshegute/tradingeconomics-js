@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDP Comparison</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/chart.js" defer></script>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>GDP Comparison</h1>
+      <div class="dropdown-container">
+        <select id="country1">
+          <option value="mexico">Mexico</option>
+          <option value="sweden">Sweden</option>
+          <option value="new zealand">New Zealand</option>
+          <option value="thailand">Thailand</option>
+        </select>
+        <select id="country2">
+          <option value="mexico">Mexico</option>
+          <option value="sweden">Sweden</option>
+          <option value="new zealand">New Zealand</option>
+          <option value="thailand">Thailand</option>
+        </select>
+        <button id="compareButton">Compare</button>
+      </div>
+      <p>
+        Please Select the countries above form the dropdown to compare their
+        GDP in Billon Dollars
+      </p>
+    </div>
+    <div class="chart-container">
+      <canvas id="myChart" width="800" height="400"></canvas>
+    </div>
+  </body>
+</html>
