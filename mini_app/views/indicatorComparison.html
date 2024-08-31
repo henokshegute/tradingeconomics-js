@@ -4,40 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indicator Comparison</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="header-container">
-      <h1>Compare Two Indicators for a Country</h1>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <div
+      class="bg-gradient-to-r from-blue-500 to-purple-600 p-4 text-center text-white shadow-md"
+    >
+      <h1
+        class="text-2xl font-bold mb-1"
+        style="font-family: 'Roboto', sans-serif"
+      >
+        Compare Two Indicators for a Country
+      </h1>
     </div>
 
-    <div class="dropdown-container">
-      <select id="country">
-        <option value="mexico">Mexico</option>
-        <option value="sweden">Sweden</option>
-        <option value="New Zealand">New Zealand</option>
-        <option value="thailand">Thailand</option>
-      </select>
+    <!-- Main Content -->
+    <div class="flex mt-8">
+      <!-- Left Sidebar (Dropdown + Description) -->
+      <div class="w-1/4 fixed top-28 left-0 bg-white p-6 rounded-lg shadow-md">
+        <!-- Dropdowns -->
+        <div class="flex flex-col space-y-4">
+          <!-- Country Dropdown -->
+          <select
+            id="country"
+            class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="mexico" selected>Mexico</option>
+            <option value="sweden">Sweden</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="thailand">Thailand</option>
+          </select>
 
-      <select id="indicator1">
-        <option value="gdp">GDP</option>
-        <option value="population">Population</option>
-        <option value="inflation rate">Inflation Rate</option>
-        <option value="unemployment rate">Unemployment Rate</option>
-      </select>
+          <!-- Indicator 1 Dropdown -->
+          <select
+            id="indicator1"
+            class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="gdp" selected>GDP</option>
+            <option value="population">Population</option>
+            <option value="inflation rate">Inflation Rate</option>
+            <option value="unemployment rate">Unemployment Rate</option>
+          </select>
 
-      <select id="indicator2">
-        <option value="gdp">GDP</option>
-        <option value="population">Population</option>
-        <option value="inflation rate">Inflation Rate</option>
-        <option value="unemployment rate">Unemployment Rate</option>
-      </select>
+          <!-- Indicator 2 Dropdown -->
+          <select
+            id="indicator2"
+            class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="gdp">GDP</option>
+            <option value="population" selected>Population</option>
+            <option value="inflation rate">Inflation Rate</option>
+            <option value="unemployment rate">Unemployment Rate</option>
+          </select>
 
-      <button id="compareButton">Compare</button>
-    </div>
+          <!-- Compare Button -->
+          <button
+            id="compareButton"
+            class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Compare
+          </button>
+        </div>
 
-    <div class="chart-container">
-      <canvas id="myChart"></canvas>
+        <!-- Description -->
+        <div class="mt-6">
+          <p class="text-gray-600">
+            Select a country and two indicators to compare. The data will be
+            visualized on the graph to the right.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Content (Graph) -->
+      <div class="ml-[25%] w-3/4 pl-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

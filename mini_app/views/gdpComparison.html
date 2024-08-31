@@ -4,35 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GDP Comparison</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <div
+      class="bg-gradient-to-r from-blue-500 to-purple-600 p-4 text-center text-white shadow-md"
+    >
+      <h1
+        class="text-2xl font-bold mb-1"
+        style="font-family: 'Roboto', sans-serif"
+      >
+        GDP Comparison
+      </h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex mt-8">
+      <!-- Left Sidebar (Dropdown + Description) -->
+      <div class="w-1/4 fixed top-28 left-0 bg-white p-6 rounded-lg shadow-md">
+        <!-- Dropdowns -->
+        <div class="flex flex-col space-y-4">
+          <!-- Country Dropdown 1 -->
+          <select
+            id="country1"
+            class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+          >
+            <option value="mexico" selected>Mexico</option>
+            <option value="sweden">Sweden</option>
+            <option value="new zealand">New Zealand</option>
+            <option value="thailand">Thailand</option>
+          </select>
+
+          <!-- Country Dropdown 2 -->
+          <select
+            id="country2"
+            class="border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mt-2"
+          >
+            <option value="mexico">Mexico</option>
+            <option value="sweden">Sweden</option>
+            <option value="new zealand">New Zealand</option>
+            <option value="thailand" selected>Thailand</option>
+          </select>
+
+          <!-- Compare Button -->
+          <button
+            id="compareButton"
+            class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Compare
+          </button>
+        </div>
+
+        <!-- Description -->
+        <div class="mt-6">
+          <p class="text-gray-600">
+            Select two countries from the dropdowns to compare their GDP in
+            Billion Dollars.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Content (Graph) -->
+      <div class="ml-[25%] w-3/4 pl-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/chart.js" defer></script>
-  </head>
-  <body>
-    <div class="header-container">
-      <h1>GDP Comparison</h1>
-      <div class="dropdown-container">
-        <select id="country1">
-          <option value="mexico">Mexico</option>
-          <option value="sweden">Sweden</option>
-          <option value="new zealand">New Zealand</option>
-          <option value="thailand">Thailand</option>
-        </select>
-        <select id="country2">
-          <option value="mexico">Mexico</option>
-          <option value="sweden">Sweden</option>
-          <option value="new zealand">New Zealand</option>
-          <option value="thailand">Thailand</option>
-        </select>
-        <button id="compareButton">Compare</button>
-      </div>
-      <p>
-        Please Select the countries above form the dropdown to compare their
-        GDP in Billon Dollars
-      </p>
-    </div>
-    <div class="chart-container">
-      <canvas id="myChart" width="800" height="400"></canvas>
-    </div>
   </body>
 </html>

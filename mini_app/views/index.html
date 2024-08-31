@@ -4,41 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="/index.css" />
-    <!-- Link to the external CSS file -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
-      <h1>Welcome to the Data Visualization App</h1>
-      <p class="description">
-        Choose one of the following options to visualize and compare economic
-        and demographic data. Click the buttons below to navigate to the
-        respective data comparison tools.
-      </p>
+  <body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-8">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Welcome to the Data Visualization App
+        </h1>
+        <p class="text-lg text-gray-600">
+          Choose one of the following options to visualize and compare economic
+          and demographic data. Click the buttons below to navigate to the
+          respective data comparison tools.
+        </p>
+      </header>
 
-      <div class="card-container">
-        <div class="card">
-          <h2>Compare GDP Data</h2>
-          <p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            Compare GDP Data
+          </h2>
+          <p class="text-gray-600 mb-4">
             Use this tool to compare GDP data between different countries.
             Select the countries and see how their GDPs stack up against each
-            other over time. Perfect for analyzing economic performance.
+            other in the past 5 years. Perfect for analyzing economic
+            performance.
           </p>
-          <a href="/api/compare-gdp-data" class="link-button"
-            >Go to GDP Comparison</a
+          <a
+            href="/api/compare-gdp-data"
+            class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300"
           >
+            Go to GDP Comparison
+          </a>
         </div>
 
-        <div class="card">
-          <h2>Compare Indicators</h2>
-          <p>
+        <!-- Card 2 -->
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+        >
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            Compare Indicators
+          </h2>
+          <p class="text-gray-600 mb-4">
             Compare two economic or demographic indicators within a selected
             country. Visualize the relationship between different indicators
             with a scatter plot to see how they correlate or diverge.
           </p>
-          <a href="/api/compare-indicators" class="link-button"
-            >Go to Indicator Comparison</a
+          <a
+            href="/api/compare-indicators"
+            class="inline-block bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition-colors duration-300"
           >
+            Go to Indicator Comparison
+          </a>
         </div>
       </div>
     </div>
